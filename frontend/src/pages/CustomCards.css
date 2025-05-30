@@ -1,0 +1,274 @@
+/* Styles specifically for CustomCard component */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.custom-app {
+    display: flex; /* Aligns custom cards in a row */
+    justify-content: center; /* Centers the custom cards horizontally */
+    align-items: center; /* Align cards vertically to the top */
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+    gap: 20px; /* Adds space between the cards */
+    width: 100%;
+    padding: 50px 0; /* Adds padding to avoid cards touching the edges */
+    height: 100vh;
+ 
+     background-size: cover;  
+       background-position: center;  
+       background-attachment: fixed;  
+       background-repeat: no-repeat;
+    /* background-color: rgb(42, 42, 80); */
+    /* Background image */
+    background-image: url('../../public/images/customcardbg.jpg');
+    /* background-size: cover; Ensures the image covers the entire background */
+    /* background-position: center;  */
+
+} 
+
+.custom-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0.2; /* Makes sure cards take up equal space */
+    width: auto;
+    height: auto;
+}
+
+.custom-card {
+    width: 300px; /* Consistent width */
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 20px;
+  
+}
+
+.custom-cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.custom-card:hover .custom-wrapper {
+    transform: perspective(600px) translateY(-5%) rotateX(20deg);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+.custom-card:hover .custom-cover-image {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    object-fit: cover;
+}
+
+.custom-wrapper::before,
+.custom-wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+
+.custom-wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+}
+
+.custom-wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+}
+
+.custom-card:hover .custom-wrapper::before,
+.custom-card:hover .custom-wrapper::after {
+    opacity: 1;
+}
+
+.custom-card:hover .custom-wrapper::after {
+    height: 120px;
+}
+
+.custom-title-text {
+    width: 100%; /* Ensure the title takes full width */
+    text-align: center;
+    color: white !important;
+    font-size: 20px;
+    text-decoration:none !important;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: transform 0.5s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+
+.custom-card:hover .custom-title-text {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+.custom-character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+.custom-card:hover .custom-character {
+    opacity: 1 !important;
+    transform: translate3d(0%, -30%, 100px) !important;
+}
+
+  .home-icon-custom {
+    position: absolute;
+    top: 20px; /* Adjust spacing from the top */
+    left: 20px; /* Adjust spacing from the left */
+    font-size: 3rem; /* Icon size */
+    color: #dfbe92; /* Default color */
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .home-icon-custom:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    color: #e6ecef; /* Change color on hover */
+  }
+  .query-section {
+    position: fixed;
+    bottom: 20px; /* Adjust distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #dee2e5;
+    font-weight: bold;
+  }
+  
+  .query-icon {
+    margin-left: 10px;
+    font-size: 2.3rem;
+    color: #fbfdff;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .query-icon:hover {
+    color: #eec10c;
+    transform: scale(1.1);
+  }
+  /* Container for the heading and line */
+.heading-container {
+    position: relative;
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  /* The horizontal line */
+  .heading-line {
+    width: 80%;
+    height: 2px;
+    background-color: #dfbe92; /* Line color */
+    margin: 0 auto;
+    position: relative;
+    animation: fadeInLine 2s ease-in-out forwards;
+  }
+  
+ 
+  
+  /* Top heading */
+  .heading-top {
+    font-size: 3.5rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    
+    animation: moveUp 2s ease-in-out forwards; /* 'forwards' ensures it stays */
+    /* animation-delay: 0.5s; Optional: Add delay for better effect */
+  }
+  
+ 
+  /* Bottom heading */
+  .heading-bottom {
+    font-size: 2rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    animation: moveDown 2s ease-in-out forwards; /* 'forwards' ensures it stays */
+    /* animation-delay: 0.5s; Optional: Add delay for better effect */
+  }
+  .custom-title-text,
+.custom-title-text:link,
+.custom-title-text:visited,
+.custom-title-text:hover,
+.custom-title-text:active {
+    text-decoration: none;
+    color: white;
+}
+  
+  @keyframes moveUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    80% {
+      transform: translateY(-30px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-30px); /* Ensure it stays here */
+      opacity: 1;
+    }
+  }
+  
+  /* Animation keyframes for the bottom heading */
+  @keyframes moveDown {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    80% {
+      transform: translateY(30px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(30px); /* Ensure it stays here */
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for the line */
+  @keyframes fadeInLine {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  
+  

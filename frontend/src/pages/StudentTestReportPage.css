@@ -1,0 +1,137 @@
+.report-page {
+    padding: 20px;
+   
+  }
+  
+  .submission-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .report-table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+  }
+  
+  .report-table th, .report-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  button {
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #764776;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  
+  .download-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+
+
+  .report-container {
+    padding: 20px;
+    background-color: #f4f7fc;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  .report-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .report-card {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    
+  }
+  
+  .report-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .report-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .report-summary h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .report-summary p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .report-summary button {
+    background-color: #764776;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .report-summary button:hover {
+    background-color: #5d3b61;
+  }
+  
+  .report-details {
+    margin-top: 20px;
+  }
+  
+  .question-report {
+    margin-bottom: 15px;
+  }
+  
+  .question-report p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 20px 0;
+  }
+  
+  .report-summary button:last-child {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .report-summary button:last-child:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,0 +1,281 @@
+/* Base Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  background-attachment: fixed;
+}
+
+/* Main Container */
+.add-test-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+/* Headings */
+.add-test-container h2 {
+  text-align: center;
+  color: #5a3e36;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.test-input {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 12px 0;
+  border: 1px solid #dcd3c8;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #fffaf5;
+  transition: all 0.3s ease;
+}
+
+.test-input:focus {
+  border-color: #a88d67;
+  box-shadow: 0 0 5px rgba(168, 141, 103, 0.4);
+  outline: none;
+}
+
+/* Global Styles */
+button {
+  margin: 8px 6px; /* Smaller margin */
+  padding: 8px 16px; /* Reduced padding for smaller buttons */
+  background-color: #6b8e23;
+  color: white;
+  border: none;
+  border-radius: 6px; /* Slightly smaller border radius */
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto; /* Adjust width for compactness */
+  font-size: 14px; /* Slightly smaller text */
+}
+
+/* Button Hover Effects */
+button:hover {
+  background-color: #4e7031;
+  transform: scale(1.05); /* Slightly subtle scale effect */
+}
+
+/* Delete Button */
+button[onClick*="delete"] {
+  background-color: #e74c3c;
+}
+
+button[onClick*="delete"]:hover {
+  background-color: #c0392b;
+}
+
+/* Add Button */
+button[onClick*="add"] {
+  background-color: #388e3c;
+}
+
+button[onClick*="add"]:hover {
+  background-color: #2e7d32;
+}
+
+/* Edit Button */
+button[onClick*="edit"] {
+  background-color: #f39c12; /* Edit Button Color */
+}
+
+button[onClick*="edit"]:hover {
+  background-color: #e67e22; /* Edit Button Hover Color */
+}
+
+
+
+/* Section Styling */
+.section {
+  background-color: #fff3eb;
+  border: 1px solid #e5cbb5;
+  padding: 24px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Question Box */
+.question {
+  background-color: #fff9f5;
+  border: 1px solid #e6d3c9;
+  padding: 18px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Test Card */
+.test-card {
+  background-color: white;
+  border: 1px solid #e6e4dc;
+  padding: 22px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.test-card h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.test-card p {
+  font-weight: bold;
+  color: #5a5a5a;
+}
+
+/* Responsive Styling */
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+  /* Main Container */
+  .add-test-container {
+    width: 100%;
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .add-test-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  /* Input fields */
+  .test-input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  /* Buttons */
+  button {
+    font-size: 14px;
+    padding: 12px;
+    width: 100%;  /* Full width for buttons */
+  }
+
+  /* Section Styling */
+  .section {
+    padding: 16px;
+  }
+
+  /* Question Box */
+  .question {
+    padding: 14px;
+  }
+
+  /* Test Card */
+  .test-card {
+    padding: 18px;
+  }
+
+  /* Ensure everything is responsive */
+  .test-card button {
+    margin-top: 10px;
+    width: 100%;  /* Full width for buttons */
+  }
+
+  .section {
+    margin-top: 15px;
+    padding: 16px;
+  }
+
+  /* Center the text for small screens */
+  .test-card h3 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .test-card p {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 768px) {
+  .add-test-container {
+    width: 100%;
+    padding: 25px;
+    margin: 15px;
+  }
+
+  .add-test-container h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .test-input {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 14px;
+    width: 100%;  /* Full width for buttons */
+  }
+
+  /* Section Styling */
+  .section {
+    padding: 20px;
+  }
+
+  .test-card {
+    padding: 20px;
+  }
+
+  /* Question Box */
+  .question {
+    padding: 16px;
+  }
+
+  .test-card button {
+    margin-top: 10px;
+    width: 100%;  /* Full width for buttons */
+  }
+
+  .test-card h3 {
+    font-size: 20px;
+  }
+
+  .test-card p {
+    font-size: 18px;
+  }
+}
+
+/* Large Devices (Desktops and Laptops) */
+@media (min-width: 900px) {
+  .add-test-container {
+    padding: 40px;
+    margin: 40px auto;
+  }
+
+  .test-input {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+
+  .section {
+    padding: 24px;
+  }
+
+  .question {
+    padding: 18px;
+  }
+}

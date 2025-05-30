@@ -1,0 +1,114 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  /* Main container */
+  .test-container {
+    max-width: auto;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styles */
+  .test-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .test-container h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  /* Question styles */
+  .test-container p {
+    margin: 15px 0 8px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+  
+  /* Submit button */
+  button {
+    margin-top: 30px;
+    padding: 14px 28px;
+    background-color: #764776;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #5a345d;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Timer style */
+  .test-container h3:first-of-type {
+    text-align: center;
+    color: #d9534f;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .test-container {
+      padding: 20px;
+    }
+  
+    .test-container h2 {
+      font-size: 22px;
+    }
+  
+    .test-container h3 {
+      font-size: 18px;
+    }
+  
+    label {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 15px;
+      padding: 12px 20px;
+    }
+  }
+  

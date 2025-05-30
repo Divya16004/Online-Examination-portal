@@ -1,0 +1,125 @@
+/* Background with an image */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('../../public/images/customcardbg.jpg') no-repeat center center/cover;
+  padding: 20px;
+}
+
+/* Form styling */
+form {
+  width: 420px; /* Increased size */
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form heading */
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -10px;
+}
+
+/* Register button */
+button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #357abd;
+}
+
+/* Login link section */
+.login-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-btn:hover {
+  color: #357abd;
+  text-decoration: none;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Mobile screens */
+@media (max-width: 500px) {
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .register-container {
+    padding: 10px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .login-link {
+    font-size: 12px;
+  }
+
+  .login-btn {
+    font-size: 12px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  form {
+    width: 350px;
+  }
+}

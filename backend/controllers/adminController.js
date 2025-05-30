@@ -1,5 +1,8 @@
 const Admin = require("../models/Admin");
 const User = require("../models/User"); // Assuming you have a User model
+const Examiner = require("../models/Examiner");
+const Student = require("../models/User");
+
 const jwt = require("jsonwebtoken");
 
 // Generate JWT Token
@@ -80,13 +83,34 @@ const updateProfile = async (req, res) => {
 };
 
 // **Get All Users (For Admin)**
+// const getAllUsers = async (req, res) => {
+//   try {
+//     const users = await User.find().select("-password"); // Exclude passwords for security
+//     res.json(users);
+//   } catch (error) {
+//     res.status(500).json({ message: "Error fetching users" });
+//   }
+// };
+
+// Get All Users (Examiner + Student)
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.find().select("-password"); // Exclude passwords for security
-    res.json(users);
+    const examiners = await Examiner.find(); // Get all examiners
+    const students = await Student.find();   // Get all students
+
+    console.log("Examiners:", examiners);
+    console.log("Students:", students);
+
+    res.json({
+      examiners,
+      students,
+    });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Error fetching users" });
   }
 };
+
+
 
 module.exports = { registerUser, loginUser, getProfile, updateProfile, getAllUsers };

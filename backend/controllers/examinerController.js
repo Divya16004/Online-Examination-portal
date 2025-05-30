@@ -42,6 +42,8 @@ const registerExaminer = async (req, res) => {
 // @access Public
 const loginExaminer = async (req, res) => {
   try {
+    console.log("Request Body:", req.body);
+
     const { email, password } = req.body;
 
     // Check if examiner exists

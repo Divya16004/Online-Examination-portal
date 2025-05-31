@@ -1,4 +1,4 @@
-import { useState } from "react";
+vimport { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import './Register.css'
@@ -25,7 +25,7 @@ const Register = () => {
     e.preventDefault();
     if (!validateForm()) return;
     try {
-      await axios.post("https://online-examination-portal-backend-8k3g.onrender.com/api/auth/register", formData);
+      await axios.post("https://online-examination-portal-e9br.onrender.com/api/auth/register", formData);
       alert("Registered successfully");
       navigate("/login"); // Redirect to login page after successful registration
     } catch (error) {

@@ -20,7 +20,7 @@ const Login = () => {
     }
     try {
       const { data } = await axios.post(
-        "https://online-examination-portal-backend-8k3g.onrender.com/api/admin/login",
+        "https://online-examination-portal-e9br.onrender.com/api/admin/login",
         formData
       );
       
@@ -54,3 +54,4 @@ const Login = () => {
 };
 
 export default Login;
+

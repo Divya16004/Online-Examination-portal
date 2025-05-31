@@ -13,7 +13,7 @@ const AddTest = () => {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const response = await axios.get("https://online-examination-portal-backend-8k3g.onrender.com/api/tests");
+        const response = await axios.get("https://online-examination-portal-e9br.onrender.com/api/tests");
         setTests(response.data);
       } catch (error) {
         console.error("Error fetching tests:", error);
@@ -71,7 +71,7 @@ const AddTest = () => {
 
   const handleDelete = async (testId) => {
     try {
-      await axios.delete(`https://online-examination-portal-backend-8k3g.onrender.com/api/tests/${testId}`);
+      await axios.delete(`https://online-examination-portal-e9br.onrender.com/api/tests/${testId}`);
       setTests(tests.filter((test) => test._id !== testId));
     } catch (error) {
       console.error("Error deleting test:", error);
@@ -90,14 +90,14 @@ const AddTest = () => {
 
     try {
       if (editingTest) {
-        await axios.put(`https://online-examination-portal-backend-8k3g.onrender.com/api/tests/${editingTest}`, {
+        await axios.put(`https://online-examination-portal-e9br.onrender.com/api/tests/${editingTest}`, {
           title,
           totalMarks,
           timeLimit,
           sections,
         });
       } else {
-        const response = await axios.post("https://online-examination-portal-backend-8k3g.onrender.com/api/tests", {
+        const response = await axios.post("https://online-examination-portal-e9br.onrender.com/api/tests", {
           title,
           totalMarks,
           timeLimit,
@@ -109,7 +109,7 @@ const AddTest = () => {
       alert(editingTest ? "Test updated successfully!" : "Test created successfully!");
       setTimeout(async () => {
     try {
-      const response = await axios.get("https://online-examination-portal-backend-8k3g.onrender.com/api/tests");
+      const response = await axios.get("https://online-examination-portal-e9br.onrender.com/api/tests");
       setTests(response.data);
     } catch (error) {
       console.error("Error refreshing tests:", error);

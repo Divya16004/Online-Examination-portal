@@ -32,7 +32,7 @@ const StudentProfile = () => {
     const fetchProfile = async () => {
       const token = localStorage.getItem("token");
       try {
-        const { data } = await axios.get("https://online-examination-portal-backend-8k3g.onrender.com/api/auth/profile", {
+        const { data } = await axios.get("https://online-examination-portal-e9br.onrender.com/api/auth/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -82,7 +82,7 @@ const StudentProfile = () => {
       console.log("Sending data:", formData); // Debugging output
   
       const response = await axios.put(
-        "https://online-examination-portal-backend-8k3g.onrender.com/api/auth/profile",
+        "https://online-examination-portal-e9br.onrender.com/api/auth/profile",
         formData,
         {
           headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },

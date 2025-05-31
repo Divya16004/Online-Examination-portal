@@ -20,7 +20,7 @@ const Login = () => {
     }
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://online-examination-portal-backend-8k3g.onrender.com/api/auth/login",
         formData
       );
       

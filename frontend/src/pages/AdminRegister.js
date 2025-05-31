@@ -25,7 +25,7 @@ const Register = () => {
     e.preventDefault();
     if (!validateForm()) return;
     try {
-      await axios.post("http://localhost:5000/api/admin/register", formData);
+      await axios.post("https://online-examination-portal-backend-8k3g.onrender.com/api/admin/register", formData);
       alert("Registered successfully");
       navigate("/login"); // Redirect to login page after successful registration
     } catch (error) {

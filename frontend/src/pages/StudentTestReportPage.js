@@ -21,7 +21,7 @@ export default function StudentTestReportPage() {
     const fetchReports = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/submissions/student/${studentId}`,
+          `https://online-examination-portal-backend-8k3g.onrender.com/api/submissions/student/${studentId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

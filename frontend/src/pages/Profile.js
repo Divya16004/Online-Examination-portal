@@ -249,7 +249,7 @@ const Profile = () => {
                 const formData = new FormData();
                 formData.append('profilePic', selectedFile);
     
-                const uploadResponse = await axios.post('http://localhost:5000/api/admin/upload-profile-pic', formData, {
+                const uploadResponse = await axios.post('https://online-examination-portal-backend-8k3g.onrender.com/api/admin/upload-profile-pic', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data',
                         Authorization: `Bearer ${localStorage.getItem("adminToken")}`  // Use adminToken
@@ -269,7 +269,7 @@ const Profile = () => {
     
             console.log("Token before update:", token);
     
-            const response = await axios.put('http://localhost:5000/api/admin/profile', updatedData, config);
+            const response = await axios.put('https://online-examination-portal-backend-8k3g.onrender.com/api/admin/profile', updatedData, config);
             setProfile(response.data || {});
             setEditing(false);
             setSuccessMessage("Profile updated successfully!");

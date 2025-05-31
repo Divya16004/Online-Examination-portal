@@ -63,7 +63,7 @@ export default function UserDashboard() {
 
   useEffect(() => {
     if (activeTab === "Tests" && tests.length === 0) {
-      axios.get("http://localhost:5000/api/tests") // Fetch test papers from MongoDB
+      axios.get("https://online-examination-portal-backend-8k3g.onrender.com/api/tests") // Fetch test papers from MongoDB
         .then((response) => {
           console.log("Tests data:", response.data); // Add this for debugging
           setTests(response.data);

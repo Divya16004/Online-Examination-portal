@@ -44,7 +44,7 @@ const TestPage = () => {
     localStorage.setItem('studentId', user._id);
   }
 
-  axios.get(`http://localhost:5000/api/tests/${id}`)
+  axios.get(`https://online-examination-portal-backend-8k3g.onrender.com/api/tests/${id}`)
     .then((response) => {
       console.log("Test Duration: ", response.data.duration); 
       setTest(response.data);

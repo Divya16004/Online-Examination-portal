@@ -20,7 +20,7 @@ const Login = () => {
     }
     try {
       const { data } = await axios.post(
-        "https://online-examination-portal-backend-8k3g.onrender.com/api/examiner/login",
+        "https://online-examination-portal-e9br.onrender.com/api/examiner/login",
         formData
       );
       

@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter as Router, Route, Routes ,Navigate} from 'react-router-dom'; // Update to use Routes instead of Switch
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'; // Update to use Routes instead of Switch
 // import Signup from './components/Signup';
 // import Signin from './components/Signin';
 import Register from "./pages/Register";

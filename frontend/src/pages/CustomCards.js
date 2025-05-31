@@ -1,6 +1,6 @@
 import React from 'react';
 import './CustomCards.css'; // Import the unique CSS file
-import { faHome , faQuestionCircle} from '@fortawesome/free-solid-svg-icons';
+import {faQuestionCircle} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaUser, FaChartBar, FaUsers, FaSignOutAlt, FaEnvelope, FaPlusCircle} from "react-icons/fa";
+import { FaChartBar, FaUsers, FaSignOutAlt, FaEnvelope, FaPlusCircle} from "react-icons/fa";
 import "./AdminDashboard.css";
 import Profile from "./Profile";
 import Statistics from "./Statistics";
 import Users from "./Users";
 import Contact from "./Contact";
-import AddTest from "./AddTest"; // Import AddTest component
+// import AddTest from "./AddTest"; // Import AddTest component
 import TestManager from "./TestManager";
 
 
@@ -23,18 +23,18 @@ export default function AdminDashboard() {
     navigate("/"); // Redirect to login page
   };
 
-  const handleTestSubmit = (newTest) => {
-    if (editTest) {
-      // Update existing test
-      setTests((prevTests) =>
-        prevTests.map((test) => (test.id === editTest.id ? newTest : test))
-      );
-      setEditTest(null);
-    } else {
-      // Create new test
-      setTests([...tests, { ...newTest, id: Date.now() }]);
-    }
-  };
+  // const handleTestSubmit = (newTest) => {
+  //   if (editTest) {
+  //     // Update existing test
+  //     setTests((prevTests) =>
+  //       prevTests.map((test) => (test.id === editTest.id ? newTest : test))
+  //     );
+  //     setEditTest(null);
+  //   } else {
+  //     // Create new test
+  //     setTests([...tests, { ...newTest, id: Date.now() }]);
+  //   }
+  // };
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };

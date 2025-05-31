@@ -62,7 +62,7 @@ import {
   faUsers,
   faCheckCircle,
   faChartBar,
-  faDatabase,
+  // faDatabase,
   faBell,
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
@@ -72,7 +72,7 @@ import './ExaminerDashboard.css';
 
 // Import your tab components here
 import MonitorProgress from './MonitorProgress';
-import EvaluateSubmissions from './EvaluateSubmissions';
+// import EvaluateSubmissions from './EvaluateSubmissions';
 import ViewAnalytics from './ViewAnalytics';
 import QuestionBank from './QuestionBank';
 import Notifications from './Notifications';

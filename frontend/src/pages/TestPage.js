@@ -44,7 +44,7 @@ const TestPage = () => {
     localStorage.setItem('studentId', user._id);
   }
 
-  axios.get(`https://online-examination-portal-backend-8k3g.onrender.com/api/tests/${id}`)
+  axios.get(`https://online-examination-portal-e9br.onrender.com/api/tests/${id}`)
     .then((response) => {
       console.log("Test Duration: ", response.data.duration); 
       setTest(response.data);
@@ -143,7 +143,7 @@ const TestPage = () => {
 
     try {
       const studentId = localStorage.getItem('studentId');
-      await axios.post('http://localhost:5000/api/submissions', {
+      await axios.post('https://online-examination-portal-e9br.onrender.com/api/submissions', {
         testId: id,
         studentId,
         answers,

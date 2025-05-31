@@ -24,7 +24,7 @@ const Test = ({ testId }) => {
     const fetchTest = async () => {
       try {
         console.log("Fetching test with ID:", testId);
-        const { data } = await axios.get(`https://online-examination-portal-backend-8k3g.onrender.com/api/tests/${testId}`);
+        const { data } = await axios.get(`https://online-examination-portal-e9br.onrender.com/api/tests/${testId}`);
         console.log("Fetched Test Data:", data); // Debugging output
         setTest(data);
         setTimeLeft(data.timeLimit * 60 || 600); // Default to 10 min if undefined
@@ -66,7 +66,7 @@ const Test = ({ testId }) => {
     setIsSubmitted(true);
 
     try {
-      const { data } = await axios.post(`https://online-examination-portal-backend-8k3g.onrender.com/api/tests/submit/${testId}`, { answers });
+      const { data } = await axios.post(`https://online-examination-portal-e9br.onrender.com/api/tests/submit/${testId}`, { answers });
       alert(`✅ Test submitted!\nYour Score: ${data.score} out of ${data.totalMarks}`);
 
       navigate("/student");
